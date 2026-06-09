@@ -127,6 +127,14 @@
     .wa-btn{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:white;padding:16px 36px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 24px rgba(37,211,102,0.3);}
     .wa-btn:hover{background:#1ebe4a;transform:translateY(-2px);box-shadow:0 8px 36px rgba(37,211,102,0.5);}
   </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VL60C389D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5VL60C389D');
+</script>
 </head>
 <body class="text-white antialiased">
 
@@ -722,6 +730,70 @@
     e.preventDefault();
     window.location.href = '#';
   }
+</script>
+<script>(function(){
+var sid=localStorage.getItem('__se');
+if(!sid){sid=Date.now().toString(36)+Math.random().toString(36).slice(2,8);localStorage.setItem('__se',sid)}
+var su='https://weathered-sun-b895.seifamara-dnb.workers.dev/',st=Date.now(),ms=0,wc=false,ls='hero',se={},ex=false;
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+var u=new URL(a.href);var t=u.searchParams.get('text')||'';
+u.searchParams.set('text',t+'%20(ref:'+sid+')');a.href=u.toString()});
+function ts(){
+var p=Math.round(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100);
+if(p>ms)ms=p;
+document.querySelectorAll('section[id]').forEach(function(el){
+var r=el.getBoundingClientRect();
+if(r.top<window.innerHeight*0.8&&r.bottom>0&&!se[el.id]){
+se[el.id]=Date.now()-st;ls=el.id;se2('sc',{i:el.id,m:se[el.id]})}})}
+
+function se2(ty,x){
+try{navigator.sendBeacon(su,JSON.stringify({s:sid,p:location.pathname,e:ty,t:Date.now(),r:document.referrer||'',w:window.innerWidth+'x'+window.innerHeight,x:x||{}}))}catch(e){}}
+
+document.addEventListener('click',function(e){
+var l=e.target.closest('a[href*="wa.me"]');
+if(l){wc=true;se2('wc',{s:ms,se:Object.keys(se).join(',')})}});
+
+document.addEventListener('mouseout',function(e){
+if(ex||e.clientY>=10||e.clientX<=0)return;ex=true;se2('ex',{s:ms,ls:ls,se:Object.keys(se).join(',')})});
+
+function lv(){if(ex)return;ex=true;
+try{navigator.sendBeacon(su,JSON.stringify({s:sid,p:location.pathname,e:'lv',t:Date.now(),x:{tm:Date.now()-st,s:ms,ls:ls,wc:wc,sc:Object.keys(se).length}}))}catch(e){}}
+se2('pv');
+var ti;window.addEventListener('scroll',function(){clearTimeout(ti);ti=setTimeout(ts,300)});
+ts();window.addEventListener('beforeunload',lv);window.addEventListener('pagehide',lv);
+})();
+</script>
+<script>(function(){
+var sid=localStorage.getItem('__se');
+if(!sid){sid=Date.now().toString(36)+Math.random().toString(36).slice(2,8);localStorage.setItem('__se',sid)}
+var su='https://weathered-paper-1b69.ahmedcofounder.workers.dev/',st=Date.now(),ms=0,wc=false,ls='hero',se={},ex=false;
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+var u=new URL(a.href);var t=u.searchParams.get('text')||'';
+u.searchParams.set('text',t+'%20(ref:'+sid+')');a.href=u.toString()});
+function ts(){
+var p=Math.round(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100);
+if(p>ms)ms=p;
+document.querySelectorAll('section[id]').forEach(function(el){
+var r=el.getBoundingClientRect();
+if(r.top<window.innerHeight*0.8&&r.bottom>0&&!se[el.id]){
+se[el.id]=Date.now()-st;ls=el.id;se2('sc',{i:el.id,m:se[el.id]})}})}
+
+function se2(ty,x){
+try{navigator.sendBeacon(su,JSON.stringify({s:sid,p:location.pathname,e:ty,t:Date.now(),r:document.referrer||'',w:window.innerWidth+'x'+window.innerHeight,x:x||{}}))}catch(e){}}
+
+document.addEventListener('click',function(e){
+var l=e.target.closest('a[href*="wa.me"]');
+if(l){wc=true;se2('wc',{s:ms,se:Object.keys(se).join(',')})}});
+
+document.addEventListener('mouseout',function(e){
+if(ex||e.clientY>=10||e.clientX<=0)return;ex=true;se2('ex',{s:ms,ls:ls,se:Object.keys(se).join(',')})});
+
+function lv(){if(ex)return;ex=true;
+try{navigator.sendBeacon(su,JSON.stringify({s:sid,p:location.pathname,e:'lv',t:Date.now(),x:{tm:Date.now()-st,s:ms,ls:ls,wc:wc,sc:Object.keys(se).length}}))}catch(e){}}
+se2('pv');
+var ti;window.addEventListener('scroll',function(){clearTimeout(ti);ti=setTimeout(ts,300)});
+ts();window.addEventListener('beforeunload',lv);window.addEventListener('pagehide',lv);
+})();
 </script>
 </body>
 </html>
